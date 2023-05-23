@@ -67,7 +67,6 @@ class DecodeUnitComp()(implicit p : Parameters) extends XSModule with DecodeUnit
   //input bits
   val staticInst = Wire(new StaticInst)
 
-
   staticInst := io.enq.staticInst
   private val inst: XSInstBitFields = staticInst.instr.asTypeOf(new XSInstBitFields)
 
